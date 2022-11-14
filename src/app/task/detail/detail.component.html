@@ -1,0 +1,23 @@
+
+<table> 
+<tr >
+  <th>no</th>
+  <th>name</th>
+  <th>age</th>
+  <th>Dprt</th>
+  <th>Email</th>
+  <th>PassWord</th>
+  <th>edit</th>
+  <th>delete</th>
+</tr>
+<tr *ngFor="let data of val; let i = index">
+  <td>{{ i + 1 }}</td>
+  <td>{{ data.name | uppercase }}</td>
+  <td>{{ data.age }}</td>
+  <td>{{ data.dprt | uppercase}}</td>
+  <td>{{ data.mail }}</td>
+  <td>{{ data.pswrd }}</td>
+  <td><button (click)="edit(i)">edit</button></td>
+  <td><button (click)="delete(i)">delete</button></td>
+</tr>
+</table>

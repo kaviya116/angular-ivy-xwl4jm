@@ -43,22 +43,9 @@ export class RegisterComponent implements OnInit {
     let data = this.newform.value;
     this.val.push(data);
   }
-  delete(i: any) {
-    this.val.splice(i, 1);
-    alert('Are You Sure You Want Delete');
-  }
+  
   update() {
     this.val[this.currentIndex] = this.newform.value;
   }
-  edit(i) {
-    this.currentIndex = i;
-    this.newform.patchValue({
-      name: this.val[i].name,
-      age: this.val[i].age,
-      dprt: this.val[i].dprt,
-      mail: this.val[i].mail,
-      pswrd: this.val[i].pswrd,
-    });
-    alert('You Want Edit The Value');
-  }
+
 }
